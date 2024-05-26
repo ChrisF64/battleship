@@ -163,3 +163,53 @@ class Ship:
     # Check if the fields selected for the ship are already occupied
     def is_occupied(self, available_fields):
         return any(field not in available_fields for field in self.fields)
+
+#Intro and Welcome Screen
+
+print(
+        """\
+    \u001b[33m
+               ____        _   _   _           _     _           
+              |  _ \      | | | | | |         | |   (_)          
+              | |_) | __ _| |_| |_| | ___  ___| |__  _ _ __ 
+              |  _ < / _` | __| __| |/ _ \/ __| '_ \| | '_ \ 
+              | |_) | (_| | |_| |_| |  __/\__ \ | | | | |_) |
+              |____/ \__,_|\__|\__|_|\___||___/_| |_|_| .__/
+                                                      | |        
+                                                      |_| 
+    \u001b[0m       
+    """
+    )
+
+welcome_msg = "\nWelcome to Battleship\n"
+
+print(welcome_msg)
+input("Press ENTER to start")
+player1 = input("\nSo, you want to play Battleship? Please enter your name!\n> ")
+while player1 == "":
+    player1 = input("\nPlease, enter your name.\n> ")
+else:
+    print(f"\nOk then, {player1}, let's begin.\n")
+
+rules = """ 
+10 ships will be hidden on the play board. Together, they occupy a total of 20 fields.
+Ships will be distributed horizontally or vertically, but not diagonally.
+No ship will touch another (not even diagonally).
+The placed ships will comprise of:
+- 1 carrier (4 fields)
+- 2 battleships (3 fields each)
+- 3 carriers (2 fields each)
+- 4 destroyers (1 field each)
+You will be notified once you have sunk a ship.
+Depending on the difficulty level you will have 80, 70, 60 or 50 missiles in total.
+You must sink all ships to win.
+"""
+
+answer_rules = input(f"\nAre you familiar with the rules of the game {player1}? (y/n)\n> ").lower()
+while answer_rules != "y" and answer_rules != "n":
+    answer_rules = input("\nCome again? Please enter y for yes or n for no.\n> ").lower()
+else:
+    if answer_rules == "y":
+        print("\nOK, we are good to go.")    
+    else:
+        print(rules)
