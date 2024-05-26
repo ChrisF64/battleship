@@ -185,31 +185,75 @@ welcome_msg = "\nWelcome to Battleship\n"
 
 print(welcome_msg)
 input("Press ENTER to start")
-player1 = input("\nSo, you want to play Battleship? Please enter your name!\n> ")
-while player1 == "":
-    player1 = input("\nPlease, enter your name.\n> ")
+player = input("\nSo, you want to play Battleship? Let's begin by entering your name...\n> ")
+while player == "":
+    player = input("\nPlease, enter your name...\n> ")
 else:
-    print(f"\nOk then, {player1}, let's begin.\n")
+    print(f"\nOk then {player}, let's get started...\n")
 
 rules = """ 
 10 ships will be hidden on the play board. Together, they occupy a total of 20 fields.
 Ships will be distributed horizontally or vertically, but not diagonally.
-No ship will touch another (not even diagonally).
-The placed ships will comprise of:
+No ship will touch another.
+Ships on the play board will comprise of:
 - 1 carrier (4 fields)
 - 2 battleships (3 fields each)
 - 3 carriers (2 fields each)
 - 4 destroyers (1 field each)
 You will be notified once you have sunk a ship.
-Depending on the difficulty level you will have 80, 70, 60 or 50 missiles in total.
+Depending on the chosen difficulty level, you will have 80, 70, 60 or 50 missiles to use.
 You must sink all ships to win.
 """
 
-answer_rules = input(f"\nAre you familiar with the rules of the game {player1}? (y/n)\n> ").lower()
+answer_rules = input(f"\nAre you familiar with the rules of the game {player}? (y/n)\n> ").lower()
 while answer_rules != "y" and answer_rules != "n":
-    answer_rules = input("\nCome again? Please enter y for yes or n for no.\n> ").lower()
+    answer_rules = input("\nPlease enter y for yes or n for no.\n> ").lower()
 else:
     if answer_rules == "y":
-        print("\nOK, we are good to go.")    
+        print("\nPrepare to launch missiles...")    
     else:
         print(rules)
+
+# Game functionality
+
+def battleship_game(play_count=0, won_count=0, lost_count=0):
+    
+    # Sets up playing board and creates empty fleet of ships
+
+    playing_field = Playfield()
+    playing_fields = playing_field.fields
+
+    car = Ship(4)
+    bat_1 = Ship(3)
+    bat_2 = Ship(3)
+    cru_1 = Ship(2)
+    cru_2 = Ship(2)
+    cru_3 = Ship(2)
+    des_1 = Ship(1)
+    des_2 = Ship(1)
+    des_3 = Ship(1)
+    des_4 = Ship(1)
+
+    empty_fleet = [car, bat_1, bat_2, cru_1, cru_2, cru_3, des_1, des_2, des_3, des_4]
+
+    # Populate playing field and determine position of ships
+
+    occupied_fields, fleet = playing_field.populate(empty_fleet)
+
+    carrier = fleet[0].fields
+    battleship_1 = fleet[1].fields
+    battleship_2 = fleet[2].fields
+    battleships = battleship_1 + battleship_2
+    cruiser_1 = fleet[3].fields
+    cruiser_2 = fleet[4].fields
+    cruiser_3 = fleet[5].fields
+    cruisers = cruiser_1 + cruiser_2 + cruiser_3
+    destroyers = fleet[6].fields + fleet[7].fields + fleet[8].fields + fleet[9].fields
+
+    hit_list = []
+    miss_list = []
+    total_missiles = 0
+    total_hits = 0
+    num_missiles = 0
+
+    
