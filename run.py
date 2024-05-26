@@ -187,7 +187,7 @@ print(welcome_msg)
 input("Press ENTER to start")
 player = input("\nSo, you want to play Battleship? Let's begin by entering your name...\n> ")
 while player == "":
-    player = input("\nPlease, enter your name...\n> ")
+    player = input("\n\u001b[31m Please, enter your name... \u001b[0m\n> ")
 else:
     print(f"\nOk then {player}, let's get started...\n")
 
@@ -236,7 +236,7 @@ def battleship_game(play_count=0, won_count=0, lost_count=0):
 
     empty_fleet = [car, bat_1, bat_2, cru_1, cru_2, cru_3, des_1, des_2, des_3, des_4]
 
-    # Populate playing field and determine position of ships
+    # Populates playing field and determines position of ships
 
     occupied_fields, fleet = playing_field.populate(empty_fleet)
 
@@ -256,4 +256,28 @@ def battleship_game(play_count=0, won_count=0, lost_count=0):
     total_hits = 0
     num_missiles = 0
 
-    
+    # Main body of the game
+
+    difficulty_levels = ["1", "2", "3", "4"]
+    selection = input("\nHow difficult would you like the game to be?\nEasy (1), Medium (2), Hard (3) or Extreme (4)?\n> ")
+    while selection not in difficulty_levels:
+        selection = input("\n\u001b[31m Incorrect input. Please, type 1 for Easy, 2 for Medium, 3 for Hard or 4 for Extreme.\u001b[0m\n> ")
+    else:
+        difficulty = int(selection)
+    if difficulty == 1:
+        print(f"\nWise decision {player}. Take it slow in the beginning.")
+        num_missiles = 80
+    if difficulty == 2:
+        print(f"\nLet's see how good your skills are {player}.")
+        num_missiles = 70
+    if difficulty == 3:
+        print(f"\nBrave decision {player}!")
+        num_missiles = 60
+    if difficulty == 4:
+        print(f"\nSo, you're an expert {player}?")
+        num_missiles = 50
+
+    input("\nPress ENTER to set up playing field and \u001b[32mGood Hunting\u001b[0m.")
+    print(playing_field.empty)
+    print("\nEnemy ships are well hidden.\nIf you would like to review the rules at any point, enter '?'.\nEnter the coordinates of your first target.")
+
