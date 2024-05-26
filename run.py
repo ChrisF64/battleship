@@ -184,7 +184,7 @@ print(
 welcome_msg = "\nWelcome to Battleship\n"
 
 print(welcome_msg)
-input("Press ENTER to start")
+input("Press ENTER to start\n>")
 player = input("\nSo, you want to play Battleship? Let's begin by entering your name...\n> ")
 while player == "":
     player = input("\n\u001b[31m Please, enter your name... \u001b[0m\n> ")
@@ -277,7 +277,7 @@ def battleship_game(play_count=0, won_count=0, lost_count=0):
         print(f"\nSo, you're an expert {player}?")
         num_missiles = 50
 
-    input("\n\u001b[32mPress ENTER to set up playing field GOOD HUNTING!\u001b[0m")
+    input("\n\u001b[32mPress ENTER to set up playing field GOOD HUNTING!\u001b[0m\n>")
     print(playing_field.empty)
     print("\nEnemy ships are well hidden.\nIf you would like to review the rules at any point, enter '?'.\nEnter the coordinates of your first target.")
 
