@@ -63,3 +63,75 @@ For PP3 Python Essentials, the developer built a battleship game. Although simil
 - The rules of the game can be accessed at any time by entering '?'.
 
 [Back to top ⇧](#battleship)
+
+## UX
+### Ideal User Demographic
+The ideal user for this website is:
+* New user
+* Current user
+
+#### New User Goals
+1. As a new user, I want to see clear instructions for gameplay. 
+2. As a new user, I want to see a visual representation of my remaining Shots.
+3. As a new user, I want the ability to replay the game.
+
+#### Current User
+1. As a current user, I want the ability to replay the game.
+2. As a current user, I want the guess and hit the various ships.
+3. As a current user, I want the choice to use different ship sizes. 
+
+### Development-Planes
+To create a command-line application that allows the user to play a classic game Battleships or Sea Battle is a strategy type guessing game for two players.
+
+#### Strategy
+Strategy incorporates user needs as well as product objectives. This website will focus on the following target audience, divided into three main categories:
+- **Roles:**
+    - New users
+    - Current users
+
+- **Demographic:**
+    - All ages
+    - All puzzle playing levels
+
+- **Psychographic:**
+    - Lifestyles:
+        - Interest in games
+        - Interest in battles
+        - Interest in Ships
+        - Interest in puzzles
+    - Personality/Attitudes:
+        - Focused
+        - Forward-Thinking
+        - Creative
+    
+The application needs to enable the **user** to:
+- play the game "Battleship" using alpha characters and numbers.
+- generate a random board on each play-through placing ships in different locations.
+    
+
+#### Scope
+The scope plane is about defining requirements based on the goals established on the strategy plane. Using the information in the strategy plane, the identified required features have been broken into the following two categories.
+- Content Requirements:
+    - The user will be looking for:
+        - Clear and concise instructions.
+        - A consistent theme, and game play. 
+- Functionality Requirements:
+    - The user will be able to:
+        - Enter co-ordinates using numbers and letters.
+        - Replay the game.
+        - End the program at the end of the game.
+
+#### Structure
+The project will be deployed to a Heroku terminal. There will be no styling aside from the image of Funny Bones built using special characters within the terminal. 
+
+#### Skeleton
+A flowchart was created to show the logic the functions would follow.
+
+<details>
+<summary>Flowchart</summary>
+
+![Flowchart](assets/readme_files/battleship-flowchart.jpeg)
+
+</details>
+
+[Back to top ⇧](#battleship)
