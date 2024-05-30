@@ -139,25 +139,31 @@ A flowchart has been created to demonstrate the logic the functions will follow.
 
 ### The Welcome Message
 - When a new game starts, the welcome message is displayed
+
   ![Welcome](assets/readme_files/Screenshot_01.png)
 
 - The user is prompted to enter their name and asked if they are familiar with the rules
+
     ![Rules](assets/readme_files/Screenshot_02.png)
 
 - If the user is not familiar with the rules, the rules are presented and the user is then asked to select a difficulty level
+
     ![Difficulty](assets/readme_files/Screenshot_03.png)
 
 - The user is then prompted to press enter to set up the playing field
+
     ![Play-Field](assets/readme_files/Screenshot_04.png)
 
 ### The Play Board
 
-- The Board
-    - Once the boardhas been set up, the user is reminded that they can review the rules at any time by pressing '?' and is prompted to enter coordinates for first target
-        ![Target](assets/readme_files/Screenshot_05.png)
+- Once the board has been set up, the user is reminded that they can review the rules at any time by pressing '?' and is prompted to enter coordinates for first target
 
-    - If the missile has successfully hit a ship, it is displayed in the terminal
-        ![Hit](assets/readme_files/Screenshot_06.png)
+    ![Target](assets/readme_files/Screenshot_05.png)
 
-    - Missile launch count and remaining missile count is displayed to the user, along with current amount of hits, and amount of hits remaining to win the game
-        ![Missiles](assets/readme_files/Screenshot_07.png)
+- If the missile has successfully hit a ship, it is displayed in the terminal
+
+    ![Hit](assets/readme_files/Screenshot_06.png)
+
+- Missile launch count and remaining missile count is displayed to the user, along with current amount of hits, and amount of hits remaining to win the game
+
+    ![Missiles](assets/readme_files/Screenshot_07.png)
