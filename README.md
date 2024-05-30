@@ -1,10 +1,10 @@
-        B B B B        A      T T T T T  T T T T T  L          E E E E E    S S S S  H       H    I    P P P P
-        B       B    A   A        T          T      L          E          S          H       H    I    P       P
-        B       B  A       A      T          T      L          E          S          H       H    I    P       P
-        B B B B    A A A A A      T          T      L          E E E        S S S    H H H H H    I    P P P P
-        B       B  A       A      T          T      L          E                  S  H       H    I    P
-        B       B  A       A      T          T      L          E                  S  H       H    I    P
-        B B B B    A       A      T          T      L L L L L  E E E E E  S S S S    H       H    I    P
+B B B B        A      T T T T T  T T T T T  L          E E E E E    S S S S  H       H    I    P P P P
+B       B    A   A        T          T      L          E          S          H       H    I    P       P
+B       B  A       A      T          T      L          E          S          H       H    I    P       P
+B B B B    A A A A A      T          T      L          E E E        S S S    H H H H H    I    P P P P
+B       B  A       A      T          T      L          E                  S  H       H    I    P
+B       B  A       A      T          T      L          E                  S  H       H    I    P
+B B B B    A       A      T          T      L L L L L  E E E E E  S S S S    H       H    I    P
 
 
 
@@ -23,8 +23,8 @@
     3. [Development Planes](#Development-Planes)
     4. [Design](#Design)
 3. [Features](#Features) 
-    1. [Imagery](#Imagery)
-    2. [Existing Features](#Existing-Features)
+    1. [The Welcome Message](#The-Welcome-Message)
+    2. [The Play Board](#The-Play-Board)
     3. [Features to Implement in the future](#Features-to-Implement-in-the-future)
 4. [Issues and Bugs](#Issues-and-Bugs)
 5. [Technologies Used](#Technologies-Used)
@@ -71,14 +71,14 @@ The ideal user for this website is:
 * Current user
 
 #### New User Goals
-1. As a new user, I want to see clear instructions for gameplay. 
-2. As a new user, I want to see a visual representation of my remaining Shots.
+1. As a new user, I want to see the rules of the game and clear instructions for gameplay. 
+2. As a new user, I want to see a visual representation of how many missiles I've launched and my remaining missiles.
 3. As a new user, I want the ability to replay the game.
 
 #### Current User
 1. As a current user, I want the ability to replay the game.
-2. As a current user, I want the guess and hit the various ships.
-3. As a current user, I want the choice to use different ship sizes. 
+2. As a current user, I want to guess and hit the various ships.
+3. As a current user, I want see where the ships are at the end of the game. 
 
 ### Development-Planes
 To create a command-line application that allows the user to play a classic game Battleships or Sea Battle is a strategy type guessing game for two players.
@@ -96,8 +96,7 @@ Strategy incorporates user needs as well as product objectives. This website wil
 - **Psychographic:**
     - Lifestyles:
         - Interest in games
-        - Interest in battles
-        - Interest in Ships
+        - Interest in strategy
         - Interest in puzzles
     - Personality/Attitudes:
         - Focused
@@ -110,7 +109,7 @@ The application needs to enable the **user** to:
     
 
 #### Scope
-The scope plane is about defining requirements based on the goals established on the strategy plane. Using the information in the strategy plane, the identified required features have been broken into the following two categories.
+Using the information in the strategy plane, the identified required features have been broken into the following two categories.
 - Content Requirements:
     - The user will be looking for:
         - Clear and concise instructions.
@@ -122,10 +121,10 @@ The scope plane is about defining requirements based on the goals established on
         - End the program at the end of the game.
 
 #### Structure
-The project will be deployed to a Heroku terminal. There will be no styling aside from the image of Funny Bones built using special characters within the terminal. 
+The project will be deployed to a Heroku terminal, with no styling. 
 
 #### Skeleton
-A flowchart was created to show the logic the functions would follow.
+A flowchart has been created to demonstrate the logic the functions will follow.
 
 <details>
 <summary>Flowchart</summary>
@@ -135,3 +134,30 @@ A flowchart was created to show the logic the functions would follow.
 </details>
 
 [Back to top ⇧](#battleship)
+
+## Features
+
+### The Welcome Message
+- When a new game starts, the welcome message is displayed
+  ![Welcome](assets/readme_files/Screenshot_01.png)
+
+- The user is prompted to enter their name and asked if they are familiar with the rules
+    ![Rules](assets/readme_files/Screenshot_02.png)
+
+- If the user is not familiar with the rules, the rules are presented and the user is then asked to select a difficulty level
+    ![Difficulty](assets/readme_files/Screenshot_03.png)
+
+- The user is then prompted to press enter to set up the playing field
+    ![Play-Field](assets/readme_files/Screenshot_04.png)
+
+### The Play Board
+
+- The Board
+    - Once the boardhas been set up, the user is reminded that they can review the rules at any time by pressing '?' and is prompted to enter coordinates for first target
+        ![Target](assets/readme_files/Screenshot_05.png)
+
+    - If the missile has successfully hit a ship, it is displayed in the terminal
+        ![Hit](assets/readme_files/Screenshot_06.png)
+
+    - Missile launch count and remaining missile count is displayed to the user, along with current amount of hits, and amount of hits remaining to win the game
+        ![Missiles](assets/readme_files/Screenshot_07.png)
