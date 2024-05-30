@@ -1,13 +1,3 @@
-B B B B        A      T T T T T  T T T T T  L          E E E E E    S S S S  H       H    I    P P P P
-B       B    A   A        T          T      L          E          S          H       H    I    P       P
-B       B  A       A      T          T      L          E          S          H       H    I    P       P
-B B B B    A A A A A      T          T      L          E E E        S S S    H H H H H    I    P P P P
-B       B  A       A      T          T      L          E                  S  H       H    I    P
-B       B  A       A      T          T      L          E                  S  H       H    I    P
-B B B B    A       A      T          T      L L L L L  E E E E E  S S S S    H       H    I    P
-
-
-
 # Battleship
 
 ![Battleship Mockup Images](assets/readme_files/responsive.png)
@@ -24,7 +14,7 @@ B B B B    A       A      T          T      L L L L L  E E E E E  S S S S    H  
     4. [Design](#Design)
 3. [Features](#Features) 
     1. [The Welcome Message](#The-Welcome-Message)
-    2. [The Play Board](#The-Play-Board)
+    2. [The Game](#The-Game)
     3. [Features to Implement in the future](#Features-to-Implement-in-the-future)
 4. [Issues and Bugs](#Issues-and-Bugs)
 5. [Technologies Used](#Technologies-Used)
@@ -142,28 +132,77 @@ A flowchart has been created to demonstrate the logic the functions will follow.
 
   ![Welcome](assets/readme_files/Screenshot_01.png)
 
+
 - The user is prompted to enter their name and asked if they are familiar with the rules
 
     ![Rules](assets/readme_files/Screenshot_02.png)
+
 
 - If the user is not familiar with the rules, the rules are presented and the user is then asked to select a difficulty level
 
     ![Difficulty](assets/readme_files/Screenshot_03.png)
 
+
 - The user is then prompted to press enter to set up the playing field
 
     ![Play-Field](assets/readme_files/Screenshot_04.png)
 
-### The Play Board
+
+### The Game
 
 - Once the board has been set up, the user is reminded that they can review the rules at any time by pressing '?' and is prompted to enter coordinates for first target
 
     ![Target](assets/readme_files/Screenshot_05.png)
 
+
+- Each field on the play board has a coordinate marked on it, e.g. 'H4'
+
+- Ships that have been hit will show up as **@@@@** and fields that were targeted but no ships were hit will show up as **----**
+
+
+
 - If the missile has successfully hit a ship, it is displayed in the terminal
 
     ![Hit](assets/readme_files/Screenshot_06.png)
 
+
+- Similarly, if a missle doesn't successfully hit a ship, it is displayed in the terminal
+
+    ![Miss](assets/readme_files/Screenshot_08.png)
+
+
 - Missile launch count and remaining missile count is displayed to the user, along with current amount of hits, and amount of hits remaining to win the game
 
     ![Missiles](assets/readme_files/Screenshot_07.png)
+
+
+- When a ship has been completely destroyed, the user is notified of which ship has been sunk
+
+    ![Sunk](assets/readme_files/Screenshot_10.png)
+
+
+- If coordinates outside of the play board are chosen, the user will be notified
+
+    ![Incorrect](assets/readme_files/Screenshot_12.png)
+
+
+- If coordinates are chosen that have already been targeted, the user will be notified
+
+    ![Already](assets/readme_files/Screenshot_13.png)
+
+
+- If all ships are sunk, the user wins the game. However, if all missiles are used and ships still remain on the board, the user loses
+
+    ![Loseer](assets/readme_files/Screenshot_14.png)
+
+
+- When the game ends, the user is asked if they would like to play another round
+
+    ![Another](assets/readme_files/Screenshot_15.png)
+
+
+- If the user chooses yes, the game begins all over again. If the user chooses no, the game presents a farewell message
+
+    ![Farewell](assets/readme_files/Screenshot_16.png)
+
+
