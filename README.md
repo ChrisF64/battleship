@@ -15,7 +15,6 @@
 3. [Features](#Features) 
     1. [The Welcome Message](#The-Welcome-Message)
     2. [The Game](#The-Game)
-    3. [Features to Implement in the future](#Features-to-Implement-in-the-future)
 4. [Issues and Bugs](#Issues-and-Bugs)
 5. [Technologies Used](#Technologies-Used)
     1. [Main Languages Used](#Main-Languages-Used)
@@ -206,3 +205,123 @@ A flowchart has been created to demonstrate the logic the functions will follow.
     ![Farewell](assets/readme_files/Screenshot_16.png)
 
 
+[Back to top ⇧](#battleship)
+
+## Issues and Bugs 
+Due to slow, meticulous structure and testing, the developer did not run into any bugs.
+
+[Back to top ⇧](#battleship)
+
+## Technologies Used
+### Main Languages Used
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Link to Python Wiki")
+
+### Frameworks, Libraries & Programs Used
+- [GitPod](https://gitpod.io/ "Link to GitPod homepage")
+    - GitPod was used for writing code, committing, and then pushing to GitHub.
+- [GitHub](https://github.com/ "Link to GitHub")
+    - GitHub was used to store the project after pushing.
+- [Lucid](https://lucid.app/ "Link to Lucid homepage")
+    - Lucid was used to create a flowchart of information, making the logic of the game easily understood.
+- [Am I Responsive?](http://ami.responsivedesign.is/# "Link to Am I Responsive Homepage")
+    - Am I Responsive was used to generate mock-up imagery of the terminal showing the game in use on Heroku.
+
+[Back to top ⇧](#battleship)
+
+## Testing
+
+Testing has been implemented throughout the entire project mainly debugging through running the program in the terminal.
+Sections of code were developed before implementation to make sure it worked and also where run through the PEP8 validator.
+Tested in Gitpod terminal, Visual Studio terminal and CI Heroku terminal.
+
+#### New User Goals:
+1. As a new user, I want to see clear instructions for gameplay.
+  - when the program is run, the user is asked if they are familiar with the rules of the game.
+  
+2. As a new user, I want to see a visual count of how many missiles I have remaining.
+  - After each misile launch, a count of how many missiles the user has launched, and how many missiles there are remaining. .
+
+3. As a new user, I want the ability to replay the game.
+  - At the end of each game, regardless of the outcome, the user is given the option to enter 'y' to replay or 'n' to end the game.
+
+#### Current User
+1. As a current user, I want the ability to replay the game.
+  - At the end of each game, regardless of the outcome, the user is given the option to enter 'y' to replay or 'n' to end the game.
+
+2. As a current user, I want the game to be more challenging.
+  - When the game launches and when replay is chosen, the user is presented with a choice of 4 difficulty levels - Easy, Medium, Hard or Extreme?.
+
+[Back to top ⇧](#battleship)
+
+## Manual Testing
+
+### Common Elements Testing
+Manual testing was conducted on the following elements that appear in the program:
+     
+- Due to the nature of the project, testing has been implemented throughout the entire project mainly debugging through running the program in the terminal.
+- Sections of code where developed before implementation to make sure it worked and also where run through the Python validator.
+- Tested in Gitpod terminal, Visual Studio Code terminal and CI Heroku terminal.
+- Limit testing has been conducted by myself, friends, family, and work colleagues, and there are currently no reported issues that have caused the game to break.
+
+[Back to top ⇧](#battleship)
+
+## Automated Testing
+
+### Code Validation
+The [PEP8 Online Checker](https://extendsclass.com/python-tester.html) service was used to validate the code written in the run.py file.
+
+**Results:**
+
+<details>
+<summary>run.py Validation results</summary>
+
+![run.py Validation results](assets/readme_files/python-code-validator.png)
+
+</details>
+
+## User testing 
+
+Tested by friends, family and work colleagues.
+
+## Deployment
+
+### Deploying on Heroku
+To deploy this project to Heroku from its GitHub repository, the following steps were taken:
+
+1. In your repository, type "pip freeze > requirements.txt" to create the list of dependencies to the requirements.txt file. Save, commit and push your changes to GitHub.
+
+2. Create an account with [Heroku](https://www.heroku.com/ "Link to Heroku site"), selecting Python as the 'Primary development language'.
+
+3. Go to your emails and click the link to verify your email address. The link will bring you to a page where you can create a password. Create a password and log in.
+
+4. On the dashboard, click the 'create new app' button. Enter a unique name for your app and select your region. Click 'Create App'.
+
+5. Go to the settings tab and click 'Reveal Config Vars'. Enter PORT as the KEY value and 8000 as the VALUE value.
+
+6. Click 'Add Buildpack' and select 'Python' and 'Nodejs'. Python must be on the top of the list. Click and drag the buildpacks to the correct positions if needed.
+
+7. Go to the deploy tab and, under 'Deployment method', click 'GitHub' and then 'Connect to GitHub'.
+
+8. In 'Connect to GitHub', search for the repository you wish to use, then click 'Connect'.
+
+9. If you 'Enable Automatic Deploys', Heroku will rebuild the app every time you push a change to GitHub. You can also choose to manually deploy using the 'Deploy Branch' option. Heroku will build the app and when it is finished, click the 'View' button to open the terminal.
+
+## Credits 
+
+The webpage [GitHub Docs - Fork a repo](https://docs.github.com/en/github-ae@latest/get-started/quickstart/fork-a-repo "Link to a GitHub Docs article on cloning and forking a repository") was used to get instructions on forking and cloning a repository. This information was used in the Deployment section of the README file.
+
+### Code 
+The developer consulted multiple sites to better understand the code they were trying to implement. The following sites were used on a more regular basis:
+- [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow page")
+- [W3Schools](https://www.w3schools.com/ "Link to W3Schools page")
+- [github](https://github.com/Becky139/Battleship "link to another students game")
+- [Heroku](https://battleship-rm.herokuapp.com/ "Link to another students game on heroku")
+
+[Back to top ⇧](#battleship)
+
+## Acknowledgements
+
+- I want to thank my friends, family and work colleagues for their help and support with testing the game.
+- I also want to thank my mentor Koko, for her invaluable knowledge.
+
+[Back to top ⇧](#battleship)
